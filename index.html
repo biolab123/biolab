@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mire se Erdhet ne BioLab! Eksperimente Bioteknologjie</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      color: #0077cc;
+    }
+
+    .experiment {
+      margin: 40px 0;
+    }
+
+    video, iframe {
+      width: 800px;
+      height: 450px;
+      border: 3px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+
+    .title {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Eksperimente në Bioteknologji</h1>
+
+  <!-- YOUTUBE VIDEOS -->
+  <div class="experiment">
+    <iframe src="https://www.youtube.com/embed/I-qtkfecACo" allowfullscreen></iframe>
+    <div class="title">Eksperimenti 1: Farmakogjenomika</div>
+  </div>
+
+  <div class="experiment">
+    <iframe src="https://www.youtube.com/embed/xZnEqJf-uvQ" allowfullscreen></iframe>
+    <div class="title">Eksperimenti 2: Nanobioteknologjia</div>
+  </div>
+
+  <div class="experiment">
+    <iframe src="https://www.youtube.com/embed/5OAZie4ytok" allowfullscreen></iframe>
+    <div class="title">Eksperimenti 3: Ekstratimi i ADN</div>
+  </div>
+
+  <!-- UPLOAD VIDEOS -->
+  <div class="experiment">
+    <video id="video4" controls></video>
+    <div class="title">Eksperimenti 4: Analiza me mikroskop</div>
+    <input type="file" accept="video/*" onchange="loadVideo(event, 'video4')" />
+  </div>
+
+  <div class="experiment">
+    <video id="video5" controls></video>
+    <div class="title">Eksperimenti 5: Terapia gjenike</div>
+    <input type="file" accept="video/*" onchange="loadVideo(event, 'video5')" />
+  </div>
+
+  <div class="experiment">
+    <video id="video6" controls></video>
+    <div class="title">Eksperimenti 6: Biofabrikimi</div>
+    <input type="file" accept="video/*" onchange="loadVideo(event, 'video6')" />
+  </div>
+
+  <div class="experiment">
+    <video id="video7" controls></video>
+    <div class="title">Eksperimenti 7: Inxhinieria e indeve</div>
+    <input type="file" accept="video/*" onchange="loadVideo(event, 'video7')" />
+  </div>
+
+  <div class="experiment">
+    <video id="video8" controls></video>
+    <div class="title">Eksperimenti 8: Inxhinieria e proteinave</div>
+    <input type="file" accept="video/*" onchange="loadVideo(event, 'video8')" />
+  </div>
+
+  <div class="experiment">
+    <video id="video9" controls></video>
+    <div class="title">Eksperimenti 9: Prodhimi i vaksinave mARN</div>
+    <input type="file" accept="video/*" onchange="loadVideo(event, 'video9')" />
+  </div>
+
+  <div class="experiment">
+    <video id="video10" controls></video>
+    <div class="title">Eksperimenti 10: Elektroforeza e ADN</div>
+    <input type="file" accept="video/*" onchange="loadVideo(event, 'video10')" />
+  </div>
+
+  <div class="experiment">
+    <video id="video11" controls></video>
+    <div class="title">Eksperimenti 11: Fermentimi bakterial</div>
+    <input type="file" accept="video/*" onchange="loadVideo(event, 'video11')" />
+  </div>
+
+  <div class="experiment">
+    <video id="video12" controls></video>
+    <div class="title">Eksperimenti 12: CRISPR</div>
+    <input type="file" accept="video/*" onchange="loadVideo(event, 'video12')" />
+  </div>
+
+  <div class="experiment">
+    <video id="video13" controls></video>
+    <div class="title">Eksperimenti 13: Qelizat staminale</div>
+    <input type="file" accept="video/*" onchange="loadVideo(event, 'video13')" />
+  </div>
+
+  <div class="experiment">
+    <video id="video14" controls></video>
+    <div class="title">Eksperimenti 14: Terapia me viruse</div>
+    <input type="file" accept="video/*" onchange="loadVideo(event, 'video14')" />
+  </div>
+
+  <script>
+    function loadVideo(event, id) {
+      const file = event.target.files[0];
+      if (file) {
+        const video = document.getElementById(id);
+        video.src = URL.createObjectURL(file);
+        video.play();
+      }
+    }
+  </script>
+
+</body>
+</html>
